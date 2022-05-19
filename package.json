@@ -1,0 +1,16 @@
+{
+  "name": "mern-travel-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "backend:install": "npm install --prefix backend",
+    "frontend:install": "npm install --prefix frontend",
+    "backend": "npm run start:prod --prefix backend",
+    "frontend": "npm run build --prefix frontend",
+
+    "postinstall": "npm run frontend:install && npm run frontend",
+    "start": "npm run backend:install && npm run backend"
+  },
+  "author": "Saaanyyyaa <56549942+Saaanyyyaa@users.noreply.github.com>",
+  "license": "ISC"
+}
