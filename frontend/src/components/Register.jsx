@@ -30,24 +30,26 @@ export default function Register({ setShowRegister }) {
     <div className="registerContainer">
       <div className="logo">
         <Room className="logoIcon" />
-        <span>LamaPin</span>
+        <br />
+        <span>Журнал путешествий</span>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="username" ref={usernameRef} />
-        <input type="email" placeholder="email" ref={emailRef} />
+      <span className="containerSpan">Регистрация</span>
+      <form className="registerForm" onSubmit={handleSubmit}>
+        <input autoFocus placeholder="Имя пользователя" ref={usernameRef} />
+        <input type="email" placeholder="Адрес электронной почты" ref={emailRef} />
         <input
           type="password"
           min="6"
-          placeholder="password"
+          placeholder="Пароль"
           ref={passwordRef}
         />
         <button className="registerBtn" type="submit">
-          Register
+          Зарегистрироваться
         </button>
         {success && (
-          <span className="success">Successfull. You can login now!</span>
+          <span className="success">Успешная регистрация! Войдите в аккаунт.</span>
         )}
-        {error && <span className="failure">Something went wrong!</span>}
+        {error && <span className="failure">Что-то пошло не так. Попробуйте снова.</span>}
       </form>
       <Cancel
         className="registerCancel"

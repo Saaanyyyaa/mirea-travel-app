@@ -28,20 +28,22 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
     <div className="loginContainer">
       <div className="logo">
         <Room className="logoIcon" />
-        <span>LamaPin</span>
+        <br />
+        <span>Журнал путешествий</span>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="username" ref={usernameRef} />
+      <span className="containerSpan">Вход в систему</span>
+      <form className="loginForm" onSubmit={handleSubmit}>
+        <input autoFocus placeholder="Имя пользователя" ref={usernameRef} />
         <input
           type="password"
           min="6"
-          placeholder="password"
+          placeholder="Пароль"
           ref={passwordRef}
         />
         <button className="loginBtn" type="submit">
-          Login
+          Войти
         </button>
-        {error && <span className="failure">Something went wrong!</span>}
+        {error && <span className="failure">Что-то пошло не так. Попробуйте снова.</span>}
       </form>
       <Cancel className="loginCancel" onClick={() => setShowLogin(false)} />
     </div>

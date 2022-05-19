@@ -115,17 +115,17 @@ function App() {
                 anchor="left"
               >
                 <div className="card">
-                  <label>Place</label>
+                  <label>Место</label>
                   <h4 className="place">{p.title}</h4>
-                  <label>Review</label>
+                  <label>Отзыв</label>
                   <p className="desc">{p.desc}</p>
-                  <label>Rating</label>
+                  <label>Оценка</label>
                   <div className="stars">
                     {Array(p.rating).fill(<Star className="star" />)}
                   </div>
-                  <label>Information</label>
+                  <label>Дополнительно</label>
                   <span className="username">
-                    Created by <b>{p.username}</b>
+                    Отзыв пользователя <b>{p.username}</b>
                   </span>
                   <span className="date">{format(p.createdAt)}</span>
                 </div>
@@ -159,18 +159,18 @@ function App() {
             >
               <div>
                 <form onSubmit={handleSubmit}>
-                  <label>Title</label>
+                  <label>Место</label>
                   <input
-                    placeholder="Enter a title"
+                    placeholder="Введите название этого места"
                     autoFocus
                     onChange={(e) => setTitle(e.target.value)}
                   />
-                  <label>Description</label>
+                  <label>Описание</label>
                   <textarea
-                    placeholder="Say us something about this place."
+                    placeholder="Расскажите что-нибудь об этом месте"
                     onChange={(e) => setDesc(e.target.value)}
                   />
-                  <label>Rating</label>
+                  <label>Оценка</label>
                   <select onChange={(e) => setStar(e.target.value)}>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -188,18 +188,18 @@ function App() {
         )}
         {currentUsername ? (
           <button className="button logout" onClick={handleLogout}>
-            Log out
+            Выйти
           </button>
         ) : (
           <div className="buttons">
             <button className="button login" onClick={() => setShowLogin(true)}>
-              Log in
+              Вход в аккаунт
             </button>
             <button
               className="button register"
               onClick={() => setShowRegister(true)}
             >
-              Register
+              Регистрация
             </button>
           </div>
         )}

@@ -39,6 +39,14 @@ form {
   color: rgb(88, 87, 87);
 }
 
+.loginForm {
+  height: 150px;
+}
+
+.registerForm {
+  height: 200px;
+}
+
 input {
   border: none;
   border-bottom: 1px solid gray;
